@@ -1,0 +1,51 @@
+@use "../global/variables";
+
+.development {
+  padding: 20px 0 30px;
+  text-align: center;
+}
+
+.development__info,
+.development__link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: variables.$base-grey;
+}
+
+.development__info {
+  margin: 0;
+}
+
+.development__link {
+  padding-left: 4px;
+
+  svg {
+    vertical-align: top;
+    color: variables.$base-grey;
+  }
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .development {
+    padding-top: 8px;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .development__link {
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:hover svg,
+    &:focus svg {
+      color: variables.$blue-primary;
+    }
+
+    &:active,
+    &:active svg {
+      color: variables.$blue-darker;
+    }
+  }
+}

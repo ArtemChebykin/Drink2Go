@@ -1,0 +1,79 @@
+@use "../global/variables";
+
+.product-card {
+  padding: 40px 20px 20px;
+  background-color: variables.$base-white;
+  border-radius: 4px;
+}
+
+.product-card__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.product-card__image-link {
+  display: block;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.product-card__image {
+  display: block;
+}
+
+.product-card__title {
+  margin: 0 0 4px;
+}
+
+.product-card__description {
+  margin: 0 0 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product-card__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .product-card {
+    padding: 50px 30px 30px;
+  }
+
+  .product-card__image-link {
+    margin-bottom: 30px;
+  }
+
+  .product-card__title {
+    margin-bottom: 10px;
+  }
+
+  .product-card__description {
+    margin: 0 0 20px;
+  }
+
+  .product-card__link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .product-card {
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .product-card {
+    &--selected {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

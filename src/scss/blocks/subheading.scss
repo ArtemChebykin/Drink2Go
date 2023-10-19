@@ -1,0 +1,11 @@
+@use "../global/variables";
+
+.subheading {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: variables.$blue-primary;
+}

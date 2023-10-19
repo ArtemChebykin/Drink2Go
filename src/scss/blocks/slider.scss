@@ -1,0 +1,92 @@
+@use "../global/variables";
+
+.slider {
+  position: relative;
+}
+
+.slider__item {
+  height: auto;
+  text-align: center;
+}
+
+.slider__pagination-button {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--prev {
+    left: -4px;
+
+    svg {
+      color: variables.$blue-primary;
+    }
+  }
+
+  &--next {
+    right: -4px;
+
+    svg {
+      color: variables.$blue-primary;
+    }
+  }
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .slider__pagination-button {
+    top: -93px;
+    width: 80px;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .slider__pagination-button {
+    &--prev {
+      top: 0;
+      background-color: transparent;
+      padding: 0 35px 0;
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to right, variables.$base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: variables.$base-grey;
+      }
+    }
+
+    &--next {
+      top: 0;
+      background-color: transparent;
+      padding: 0 35px 0;
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to left, variables.$base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: variables.$base-grey;
+      }
+    }
+  }
+}

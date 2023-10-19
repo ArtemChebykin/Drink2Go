@@ -1,0 +1,79 @@
+@use "../global/variables";
+
+.button {
+  display: block;
+  white-space: nowrap;
+  padding: 8px 20px;
+  font-family: variables.$font-main;
+  font-size: 16px;
+  line-height: 24px;
+  color: variables.$base-white;
+  background-color: variables.$blue-primary;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+
+  &--submit {
+    padding: 10px 15px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  &--reset {
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 24px;
+    color: variables.$blue-primary;
+    background-color: variables.$base-white;
+  }
+
+  &--basket {
+    position: relative;
+    padding: 8px 20px 8px 46px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &--basket::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 16px;
+    background-image: url("../../img/basket.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .button {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: variables.$blue-lighter;
+    }
+
+    &:active {
+      background-color: variables.$blue-darker;
+    }
+
+    &:disabled {
+      background-color: variables.$base-grey;
+    }
+
+    &--reset {
+      &:hover,
+      &:focus,
+      &:active {
+        color: variables.$base-white;
+      }
+    }
+  }
+}

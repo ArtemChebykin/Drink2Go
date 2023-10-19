@@ -1,0 +1,42 @@
+@use "../global/variables";
+
+.swiper-button-next {
+  margin-top: 0;
+
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+.swiper-button-prev {
+  margin-top: 0;
+
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .swiper-pagination.swiper-pagination-horizontal {
+    bottom: 65px;
+    display: block;
+  }
+
+  .swiper-pagination-bullet {
+    width: 62px;
+    height: 4px;
+    background-color: variables.$base-white;
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: variables.$blue-primary;
+  }
+}

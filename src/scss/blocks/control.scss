@@ -1,0 +1,41 @@
+@use "../global/variables";
+
+.control {
+  &--radio,
+  &--checkbox {
+    display: none;
+  }
+
+  &--price {
+    margin: 0;
+    padding: 7px 10px;
+    width: 118px;
+    height: 38px;
+    font-family: variables.$font-main;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    background-color: variables.$base-white;
+    border: 2px solid variables.$blue-lighter;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .control {
+    &--price {
+      width: 92px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .control {
+    &--price {
+      width: 135px;
+      height: 40px;
+    }
+  }
+}

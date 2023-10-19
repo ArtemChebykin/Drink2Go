@@ -1,0 +1,49 @@
+@use "../global/variables";
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.sorting__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: variables.$base-black;
+}
+
+.sorting__goods {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: lowercase;
+  background-color: variables.$lightest-grey;
+  color: variables.$blue-primary;
+  appearance: none;
+  border: none;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .sorting {
+    justify-content: flex-end;
+    margin-bottom: 28px;
+  }
+
+  .sorting__goods-container {
+    margin-left: 26px;
+  }
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .sorting__goods {
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: variables.$base-secondary;
+    }
+  }
+}

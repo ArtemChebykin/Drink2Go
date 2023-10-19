@@ -1,0 +1,113 @@
+@use "../global/variables";
+
+.sticker {
+  position: relative;
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+
+  &--radio {
+    margin-bottom: 22px;
+    padding-left: 34px;
+
+    .sticker__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../../img/radio-default-unchecked.svg");
+    }
+
+    .control:disabled ~ .sticker__text {
+      color: variables.$base-grey;
+    }
+
+    .control:checked + .sticker__icon {
+      background-image: url("../../img/radio-default-checked.svg");
+    }
+
+    .control:disabled + .sticker__icon {
+      background-image: url("../../img/radio-disabled-checked.svg");
+    }
+
+    .control:disabled:not(:checked) + .sticker__icon {
+      background-image: url("../../img/radio-disabled-unchecked.svg");
+    }
+
+    &:hover,
+    &:focus {
+      .sticker__icon {
+        background-image: url("../../img/radio-hover.svg");
+      }
+    }
+
+    &:active {
+      .sticker__icon {
+        background-image: url("../../img/radio-default-checked.svg");
+      }
+    }
+  }
+
+  &--checkbox {
+    padding-left: 52px;
+    margin-bottom: 20px;
+
+    .sticker__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 42px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../../img/checkbox-default-unchecked.svg");
+    }
+
+    .control:disabled ~ .sticker__text {
+      color: variables.$base-grey;
+    }
+
+    .control:checked + .sticker__icon {
+      background-image: url("../../img/checkbox-default-checked.svg");
+    }
+
+    .control:disabled:checked + .sticker__icon {
+      background-image: url("../../img/checkbox-disabled-checked.svg");
+    }
+
+    .controlt:disabled:not(:checked) + .sticker__icon {
+      background-image: url("../../img/checkbox-disabled-unchecked.svg");
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      .sticker__icon {
+        background-image: url("../../img/checkbox-hover.svg");
+      }
+    }
+
+    &:active {
+      .sticker__icon {
+        background-image: url("../../img/checkbox-default-checked.svg");
+      }
+    }
+  }
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .sticker {
+    &--radio {
+      margin-bottom: 21px;
+    }
+  }
+}

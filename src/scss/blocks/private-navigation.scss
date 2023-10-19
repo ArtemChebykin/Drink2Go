@@ -1,0 +1,58 @@
+@use "../global/variables";
+
+.private-navigation {
+  display: flex;
+}
+
+.private-navigation__list {
+  display: flex;
+}
+
+.private-navigation__link {
+  display: inline-flex;
+  padding: 22px;
+  color: variables.$base-black;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  &:active {
+    background-color: variables.$base-secondary;
+  }
+}
+
+.private-navigation__login-icon {
+  vertical-align: top;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .private-navigation__link {
+    padding: 32px 22px;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .private-navigation__items {
+    gap: 20px;
+  }
+
+  .private-navigation__link {
+    padding: 32px 20px;
+
+    &:hover,
+    &:focus {
+      color: variables.$blue-primary;
+
+      svg {
+        color: variables.$blue-primary;
+      }
+    }
+  }
+
+  .private-navigation__login-icon {
+    margin-right: 8px;
+  }
+}

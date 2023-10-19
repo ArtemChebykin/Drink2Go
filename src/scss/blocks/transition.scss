@@ -1,0 +1,50 @@
+@use "../global/variables";
+
+.transition {
+  display: flex;
+}
+
+.transition__link-item {
+  margin-bottom: 4px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.transition__actions {
+  display: flex;
+}
+
+.transition__action-icon {
+  vertical-align: top;
+}
+
+.transition__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: variables.$base-black;
+}
+
+@media (min-width: variables.$min-tablet-width) {
+  .transition__actions {
+    align-items: center;
+  }
+}
+
+@media (min-width: variables.$min-desktop-width) {
+  .transition__link {
+    &:hover,
+    &:focus {
+      color: variables.$blue-lighter;
+    }
+
+    &:active {
+      color: variables.$blue-darker;
+      background-color: variables.$base-secondary;
+    }
+  }
+}
