@@ -2,11 +2,10 @@ import "./scss/style.scss";
 import navigationBasket from "./img/icons/navigation-basket.svg";
 import navigationStudy from "./img/icons/navigation-study.svg";
 import logoIcon from "./img/logo-desktop.svg";
-import decafCoffe from "./img/decaf-desktop.png";
-import lavenderCoffe from "./img/lavender-desktop.png";
-import espressoCoffe from "./img/espresso-desktop.png";
+
 import FeaturesList from "./components/Features/FeaturesList";
 import Navigation from "./components/Header/Navigation";
+import SwiperItem from "./components/Header/Swiper";
 
 function App() {
   return (
@@ -67,93 +66,10 @@ function App() {
           </button>
         </div>
       </div>
-      <source className="slider swiper" />
       <h1 className="visually-hidden">
         Drink2Go - интернет-магазин по продаже кофейных напитков.
       </h1>
-      <ul className="slider__items swiper-wrapper reset-default">
-        <li className="slider__item product product--flat-white swiper-slide">
-          <div className="container product__container reset-default">
-            <img
-              className="product__picture"
-              src={decafCoffe}
-              width="280"
-              height="280"
-              alt="Банка с кофейным напитком Декаф Флэт Уайт, 100% чистая Эфиопская арабика."
-            />
-            <div className="product__wrapper">
-              <p className="product__subheading subheading">Новинка!</p>
-              <h2 className="product__heading">Декаф Флэт Уайт</h2>
-              <p className="product__description">
-                Свежесваренный кофе без кофеина из&nbsp;Эфиопии
-                с&nbsp;натуральным фермерским молоком&nbsp;&mdash; то, что нужно
-                для&nbsp;расслабления после тяжёлого рабочего дня
-              </p>
-              <div className="product__actions">
-                <p className="product__cost product__cost--old">295₽</p>
-                <p className="product__cost">225₽</p>
-                <button className="product__button button" type="button">
-                  Заказать
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li className="slider__item product product--lavender-latte swiper-slide reset-default">
-          <div className="container product__container">
-            <img
-              className="product__picture"
-              src={lavenderCoffe}
-              width="280"
-              height="280"
-              alt="Банка с кофейным напитком Декаф Флэт Уайт, 100% чистая Перуанская арабика."
-            />
-            <div className="product__wrapper">
-              <p className="product__subheading subheading">Новинка!</p>
-              <h2 className="product__heading">Лавандовый Латте</h2>
-              <p className="product__description">
-                Невероятное сочетание перуанской высокогорной арабики c молоком
-                ламы и&nbsp;лавандовым сиропом унесёт вас прямо на&nbsp;вершину
-                Радужных гор
-              </p>
-              <div className="product__actions">
-                <p className="product__cost product__cost--old">285₽</p>
-                <p className="product__cost">265₽</p>
-                <button className="product__button button" type="button">
-                  Заказать
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li className="slider__item product product--espresso swiper-slide reset-default">
-          <div className="container product__container">
-            <img
-              className="product__picture"
-              src={espressoCoffe}
-              width="280"
-              height="280"
-              alt="Банка с кофейным напитком Декаф Флэт Уайт 100% чистая Колумбийская арабика."
-            />
-            <div className="product__wrapper">
-              <p className="product__subheading subheading">Новинка!</p>
-              <h2 className="product__heading">Тройной Эспрессо</h2>
-              <p className="product__description">
-                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
-                эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая
-                бодрость
-              </p>
-              <div className="product__actions">
-                <p className="product__cost product__cost--old">395₽</p>
-                <p className="product__cost">375₽</p>
-                <button className="product__button button" type="button">
-                  Заказать
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <SwiperItem />
       <FeaturesList />
       <section className="catalog">
         <div className="catalog__wrapper-container container reset-default">
@@ -724,7 +640,7 @@ function App() {
             <h4 className="main-footer__address-heading">Контакты</h4>
             <address className="main-footer__address">
               <span className="main-footer__location">
-                Санкт-Петербург, набережная реки Карповки, дом&nbsp;5
+                Санкт-Петербург, набережная реки Карповки, дом 5
               </span>
               <a
                 className="main-footer__phone page-link"
