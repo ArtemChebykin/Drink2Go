@@ -26,7 +26,6 @@
 .main-navigaion-link {
   display: block;
   padding: 20px 0;
-  background-color: variables.$base-white;
   color: variables.$base-black;
   font-weight: 500;
   font-size: 12px;
@@ -71,11 +70,6 @@
         width: 100%;
         height: 2px;
         background-color: variables.$blue-primary;
-      }
-
-      .main-navigaion-link {
-        color: variables.$blue-primary;
-        background-color: variables.$base-white;
       }
     }
   }

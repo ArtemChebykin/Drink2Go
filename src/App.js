@@ -2,6 +2,11 @@ import "./scss/style.scss";
 import navigationBasket from "./img/icons/navigation-basket.svg";
 import navigationStudy from "./img/icons/navigation-study.svg";
 import logoIcon from "./img/logo-desktop.svg";
+import decafCoffe from "./img/decaf-desktop.png";
+import lavenderCoffe from "./img/lavender-desktop.png";
+import espressoCoffe from "./img/espresso-desktop.png";
+import FeaturesList from "./components/Features/FeaturesList";
+import Navigation from "./components/Header/Navigation";
 
 function App() {
   return (
@@ -26,42 +31,7 @@ function App() {
               Интернет-магазин кофейных напитков
             </span>
           </div>
-          <nav className="main-navigation header__main-navigation header__main-navigation--nojs">
-            <ul className="main-navigation__list reset-default main-navigation__items">
-              <li className="main-navigation__item main-navigation__item--current">
-                <a
-                  className="site-link main-navigaion-link page-link"
-                  href="index.html"
-                >
-                  Главная
-                </a>
-              </li>
-              <li className="main-navigation__item">
-                <a
-                  className="site-link main-navigaion-link page-link"
-                  href="##"
-                >
-                  Каталог
-                </a>
-              </li>
-              <li className="main-navigation__item">
-                <a
-                  className="site-link main-navigaion-link page-link"
-                  href="##"
-                >
-                  Доставка
-                </a>
-              </li>
-              <li className="main-navigation__item">
-                <a
-                  className="site-link main-navigaion-link page-link"
-                  href="##"
-                >
-                  О нас
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <Navigation />
           <nav className="private-navigation header__private-navigation">
             <ul className="private-navigation__list private-navigation__items reset-default">
               <li className="private-navigation__item">
@@ -104,38 +74,13 @@ function App() {
       <ul className="slider__items swiper-wrapper reset-default">
         <li className="slider__item product product--flat-white swiper-slide">
           <div className="container product__container reset-default">
-            <picture className="product__picture-container">
-              <source
-                type="image/webp"
-                media="(min-width: 1024px)"
-                srcset="img/decaf-desktop.webp 1x, img/decaf-desktop2x.webp 2x"
-              />
-              <source
-                type="image/webp"
-                media="(min-width: 768px)"
-                srcset="img/decaf-tablet.webp 1x, img/decaf-tablet2x.webp 2x"
-              />
-              <source
-                type="image/webp"
-                srcset="img/decaf-mobile.webp 1x, img/decaf-mobile2x.webp 2x"
-              />
-              <source
-                media="(min-width: 1024px)"
-                srcset="img/decaf-desktop.png 1x, img/decaf-desktop2x.png 2x"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="img/decaf-tablet.png 1x, img/decaf-tablet2x.png 2x"
-              />
-              <img
-                className="product__picture"
-                src="img/decaf-mobile.png"
-                srcset="img/decaf-mobile@2x.png 2x"
-                width="280"
-                height="280"
-                alt="Банка с кофейным напитком Декаф Флэт Уайт, 100% чистая Эфиопская арабика."
-              />
-            </picture>
+            <img
+              className="product__picture"
+              src={decafCoffe}
+              width="280"
+              height="280"
+              alt="Банка с кофейным напитком Декаф Флэт Уайт, 100% чистая Эфиопская арабика."
+            />
             <div className="product__wrapper">
               <p className="product__subheading subheading">Новинка!</p>
               <h2 className="product__heading">Декаф Флэт Уайт</h2>
@@ -156,38 +101,13 @@ function App() {
         </li>
         <li className="slider__item product product--lavender-latte swiper-slide reset-default">
           <div className="container product__container">
-            <picture className="product__picture-container">
-              <source
-                type="image/webp"
-                media="(min-width: 1024px)"
-                srcset="img/lavender-desktop.webp 1x, img/lavender-desktop2x.webp 2x"
-              />
-              <source
-                type="image/webp"
-                media="(min-width: 768px)"
-                srcset="img/lavender-tablet.webp 1x, img/lavender-tablet2x.webp 2x"
-              />
-              <source
-                type="image/webp"
-                srcset="img/lavender-mobile.webp 1x, img/lavender-mobile2x.webp 2x"
-              />
-              <source
-                media="(min-width: 1024px)"
-                srcset="img/lavender-desktop.png 1x, img/lavender-desktop2x.png 2x"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="img/lavender-tablet.png 1x, img/lavender-tablet2x.png 2x"
-              />
-              <img
-                className="product__picture"
-                src="img/lavender-mobile.png"
-                srcset="img/lavender-mobile2x.png 2x"
-                width="280"
-                height="280"
-                alt="Банка с кофейным напитком Декаф Флэт Уайт, 100% чистая Перуанская арабика."
-              />
-            </picture>
+            <img
+              className="product__picture"
+              src={lavenderCoffe}
+              width="280"
+              height="280"
+              alt="Банка с кофейным напитком Декаф Флэт Уайт, 100% чистая Перуанская арабика."
+            />
             <div className="product__wrapper">
               <p className="product__subheading subheading">Новинка!</p>
               <h2 className="product__heading">Лавандовый Латте</h2>
@@ -208,38 +128,13 @@ function App() {
         </li>
         <li className="slider__item product product--espresso swiper-slide reset-default">
           <div className="container product__container">
-            <picture className="product__picture-container">
-              <source
-                type="image/webp"
-                media="(min-width: 1024px)"
-                srcset="img/espresso-desktop.webp 1x, img/espresso-desktop2x.webp 2x"
-              />
-              <source
-                type="image/webp"
-                media="(min-width: 768px)"
-                srcset="img/espresso-tablet.webp 1x, img/espresso-tablet2x.webp 2x"
-              />
-              <source
-                type="image/webp"
-                srcset="img/espresso-mobile.webp 1x, img/espresso-mobile2x.webp 2x"
-              />
-              <source
-                media="(min-width: 1024px)"
-                srcset="img/espresso-desktop.png 1x, img/espresso-desctop2x.png 2x"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="img/espresso-tablet.png 1x, img/espresso-tablet2x.png 2x"
-              />
-              <img
-                className="product__picture"
-                src="img/espresso-mobile.png"
-                srcset="img/espresso-mobile@2x.png 2x"
-                width="280"
-                height="280"
-                alt="Банка с кофейным напитком Декаф Флэт Уайт 100% чистая Колумбийская арабика."
-              />
-            </picture>
+            <img
+              className="product__picture"
+              src={espressoCoffe}
+              width="280"
+              height="280"
+              alt="Банка с кофейным напитком Декаф Флэт Уайт 100% чистая Колумбийская арабика."
+            />
             <div className="product__wrapper">
               <p className="product__subheading subheading">Новинка!</p>
               <h2 className="product__heading">Тройной Эспрессо</h2>
@@ -259,41 +154,7 @@ function App() {
           </div>
         </li>
       </ul>
-      <section className="features">
-        <div className="features__wrapper container reset-default">
-          <h1 className="features__head subheading">Преимущества</h1>
-          <h2 className="features__subtitle">
-            Главные причины выбрать Drink2Go
-          </h2>
-          <ul className="features__list reset-default">
-            <li className="features__item features__item--speed">
-              <h2 className="features__title">Скорость</h2>
-              <p className="features__text">
-                Готовый напиток всегда под рукой просто открой банку
-              </p>
-            </li>
-            <li className="features__item features__item--commfort">
-              <h2 className="features__title">Удобство</h2>
-              <p className="features__text">
-                Легко помещается и&nbsp;в&nbsp;карман, и&nbsp;в&nbsp;маленькую
-                сумочку
-              </p>
-            </li>
-            <li className="features__item features__item--courage">
-              <h2 className="features__title">Бодрость</h2>
-              <p className="features__text">
-                Сбалансированная доза кофеина даст мощный заряд энергии
-              </p>
-            </li>
-            <li className="features__item features__item--ecology">
-              <h2 className="features__title">Экологичность</h2>
-              <p className="features__text">
-                Вся упаковка сделана из&nbsp;перерабатываемых материалов
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <FeaturesList />
       <section className="catalog">
         <div className="catalog__wrapper-container container reset-default">
           <h1 className="catalog__head subheading">Каталог</h1>
