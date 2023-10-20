@@ -1,13 +1,6 @@
 import React from "react";
 
 const FeatureItem = () => {
-  // const list = [
-  //   { title: "Скорость", subtitle: "Готовый напиток всегда под рукой просто открой банку" },
-  //   { title: "Удобство", subtitle: "Легко помещается и в карман, и в маленькую сумочку" },
-  //   { title: "Бодрость", subtitle: "Сбалансированная доза кофеина даст мощный заряд энергии" },
-  //   { title: "Экологичность", subtitle: "Вся упаковка сделана из перерабатываемых материалов" },
-  // ];
-
   return (
     <>
       <ul className="features__list reset-default">
