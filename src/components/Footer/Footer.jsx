@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="main-footer__wrapper reset-default">
         <div className="main-footer__social-list social-list">
           <div className="main-footer-container">
-            <a className="main-footer__image logo page-link" href="index.html">
+            <a className="main-footer__image logo page-link" href="/">
               <img
                 className="main-footer__image-logo"
                 src={logoFooter}

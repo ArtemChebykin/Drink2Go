@@ -1,6 +1,7 @@
 import React from "react";
 import navigationBasket from "../../img/icons/navigation-basket.svg";
 import navigationStudy from "../../img/icons/navigation-study.svg";
+import { Link } from "react-router-dom";
 
 const Private = () => {
   return (
@@ -18,7 +19,7 @@ const Private = () => {
           </a>
         </li>
         <li className="private-navigation__item">
-          <a className="private-navigation__link page-link" href="##">
+          <Link className="private-navigation__link page-link" to="/cart">
             <img
               className="private-navigation__login-icon"
               src={navigationBasket}
@@ -26,7 +27,7 @@ const Private = () => {
             />
             <span className="visually-hidden">Корзина</span>
             <span className="visual-desktop">Корзина</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
